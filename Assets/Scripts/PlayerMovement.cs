@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         SetMoveDirection();
+        Flip();
     }
 
     private void FixedUpdate()
@@ -107,5 +108,16 @@ public class PlayerMovement : MonoBehaviour
         currentSpeed = moveSpeed;
         SetPlayerAlpha(1f);
         canDash = true;
+    }
+
+    /// <summary>
+    /// 플레이어 이동 방향에 따라 플립한다.
+    /// </summary>
+    private void Flip()
+    {
+        if (moveDirection.x == 0f)
+            return;
+        
+        spriteRenderer.flipX = !(moveDirection.x > 0f);
     }
 }
