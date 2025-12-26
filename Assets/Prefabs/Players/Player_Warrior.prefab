@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9003593983242410269}
   - component: {fileID: 2842581070452000188}
+  - component: {fileID: 1741879152991468184}
   - component: {fileID: 2347772929718077684}
   m_Layer: 0
   m_Name: Player_Warrior
@@ -17,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9003593983242410269
 Transform:
   m_ObjectHideFlags: 0
@@ -51,6 +52,19 @@ MonoBehaviour:
   dashSpeed: 20
   dashDuraion: 0.3
   alpha: 0.1
+--- !u!114 &1741879152991468184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878014069292974933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a56dc83eeaea584992e66e87a56328c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerConfiguration: {fileID: 11400000, guid: ce43e6cd4b2186d40b692ff31f7a1a4a, type: 2}
 --- !u!50 &2347772929718077684
 Rigidbody2D:
   serializedVersion: 5

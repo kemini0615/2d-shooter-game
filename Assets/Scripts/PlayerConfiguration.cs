@@ -9,12 +9,12 @@ public class PlayerConfiguration : ScriptableObject
 
     [Header("Stats")]
     public int level;
-    public int currentHealth;
-    public int maxHealth;
-    public int armor;
-    public int maxArmor;
-    public int energy;
-    public int MaxEnergy;
-    public int criticalChance;
-    public int criticalDamage;
+    public float currentHealth;
+    public float maxHealth;
+    public float armor;
+    public float maxArmor;
+    public float energy;
+    public float MaxEnergy;
+    public float criticalChance;
+    public float criticalDamage;
 }
