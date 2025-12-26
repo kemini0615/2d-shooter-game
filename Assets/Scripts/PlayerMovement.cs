@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private PlayerInputActions playerInputActions;
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer playerSpriteRenderer;
 
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float dashSpeed = 20f;
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerInputActions = new PlayerInputActions();
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        playerSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -76,9 +76,9 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="alpha">투명도</param>
     private void SetPlayerAlpha(float alpha)
     {
-        Color initialColor = spriteRenderer.color;
+        Color initialColor = playerSpriteRenderer.color;
         Color newColor = new Color(initialColor.r, initialColor.g, initialColor.b, alpha);
-        spriteRenderer.color = newColor;
+        playerSpriteRenderer.color = newColor;
     }
 
     /// <summary>
@@ -118,6 +118,6 @@ public class PlayerMovement : MonoBehaviour
         if (moveDirection.x == 0f)
             return;
         
-        spriteRenderer.flipX = !(moveDirection.x > 0f);
+        playerSpriteRenderer.flipX = !(moveDirection.x > 0f);
     }
 }
