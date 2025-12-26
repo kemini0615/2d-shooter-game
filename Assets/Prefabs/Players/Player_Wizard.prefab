@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 937366494514285934}
   - component: {fileID: 2412285293262521762}
   - component: {fileID: 6569718886696448829}
+  - component: {fileID: 7252782742321231960}
   - component: {fileID: 2152589326210432446}
   m_Layer: 0
   m_Name: Player_Wizard
@@ -215,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &937366494514285934
 Transform:
   m_ObjectHideFlags: 0
@@ -259,6 +260,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a56dc83eeaea584992e66e87a56328c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerConfiguration: {fileID: 11400000, guid: 1f15ec33fc857844bbfbadf346a8578d, type: 2}
+--- !u!114 &7252782742321231960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6865728510488739008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c0145b4f26d004abc7f2e89a95ce4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerConfiguration: {fileID: 11400000, guid: 1f15ec33fc857844bbfbadf346a8578d, type: 2}
