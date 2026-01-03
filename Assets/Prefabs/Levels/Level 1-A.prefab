@@ -182,7 +182,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1438608248163149313, guid: d2bdb9f4e5aa78842b5e2d303bb4f84d, type: 3}
       propertyPath: m_Name
-      value: Room_EW
+      value: Room_WE
       objectReference: {fileID: 0}
     - target: {fileID: 7854641034547134908, guid: d2bdb9f4e5aa78842b5e2d303bb4f84d, type: 3}
       propertyPath: m_LocalPosition.x

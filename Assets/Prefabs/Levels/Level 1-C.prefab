@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7524478158042421386, guid: 1a33d15f521de2f458c81db8c66b54e7, type: 3}
       propertyPath: m_Name
-      value: Room_NSEW
+      value: Room_NSWE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

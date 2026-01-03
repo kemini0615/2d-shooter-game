@@ -364,7 +364,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1031626088381578772, guid: bc97b80ca0e8bec44b46a3d729b5bca8, type: 3}
       propertyPath: m_Name
-      value: Room_SEW
+      value: Room_SWE
       objectReference: {fileID: 0}
     - target: {fileID: 5088141922953290373, guid: bc97b80ca0e8bec44b46a3d729b5bca8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -776,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7524478158042421386, guid: 1a33d15f521de2f458c81db8c66b54e7, type: 3}
       propertyPath: m_Name
-      value: Room_NSEW
+      value: Room_NSWE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
