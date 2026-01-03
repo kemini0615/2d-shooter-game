@@ -47,6 +47,9 @@ TagManager:
   - name: Wall
     uniqueID: 79737791
     locked: 0
+  - name: Prop
+    uniqueID: 2717447707
+    locked: 0
   - name: Player
     uniqueID: 1789158053
     locked: 0
