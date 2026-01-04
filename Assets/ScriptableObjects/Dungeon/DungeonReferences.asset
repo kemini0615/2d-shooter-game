@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89358ffb8275f2640a5cc7c4162de7fa, type: 3}
   m_Name: DungeonReferences
   m_EditorClassIdentifier: 
+  levels:
+  - name: Level 1
+    dungeons:
+    - {fileID: 6399874957883188387, guid: 98c1a8f0d07bade40b2bc7e774f06e20, type: 3}
+    - {fileID: 5968282927602275478, guid: 6d672c4e25175bd48b1d4fdb314d6573, type: 3}
+    - {fileID: 5660286071083815967, guid: d95b6c3795655a440afca6d04c4b28e2, type: 3}
+    - {fileID: 1698312432762100757, guid: f467685768d26a84b8a6fc4d7768ac2e, type: 3}
+    - {fileID: 6952060106990483626, guid: 94bcd4d80e3566648afaae41b1473553, type: 3}
   DoorNS: {fileID: 7755278078182781136, guid: 3750b677dbc8c3d4a920d15a6d634e4c, type: 3}
   DoorWE: {fileID: 6334586794510551360, guid: ae3463e6269585444be7aecb8d2a7535, type: 3}

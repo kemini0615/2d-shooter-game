@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 2386582719183042253}
   - component: {fileID: 6343413160427681466}
   - component: {fileID: 2998907312283490140}
-  - component: {fileID: 501695989292887}
+  - component: {fileID: 6091353664194605933}
   m_Layer: 0
   m_Name: Player_Knight
   m_TagString: Player
@@ -304,8 +304,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &501695989292887
-BoxCollider2D:
+--- !u!58 &6091353664194605933
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -338,15 +338,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.9, y: 0.9}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.1}
+  m_Radius: 0.4

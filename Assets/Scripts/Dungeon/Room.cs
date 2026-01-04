@@ -20,6 +20,8 @@ public class Room : MonoBehaviour
     [SerializeField] private RoomType roomType;
     [SerializeField] private Tilemap extraLayer;
 
+    public RoomType RoomType => roomType;
+
     [SerializeField] private Transform[] doorPositionsNS;
     [SerializeField] private Transform[] doorPositionsWE;
 

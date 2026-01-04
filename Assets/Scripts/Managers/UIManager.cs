@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance;
+
     [Header("TEMP")]
     [SerializeField] private PlayerConfiguration playerConfiguration;
 
@@ -14,6 +16,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI armorText;
     [SerializeField] private Image energyBar;
     [SerializeField] private TextMeshProUGUI energyText;
+
+    [SerializeField] private CanvasGroup fadePanel;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Update()
     {
@@ -31,5 +40,10 @@ public class UIManager : MonoBehaviour
         healthText.text = $"{playerConfiguration.currentHealth}/{playerConfiguration.maxHealth}";
         armorText.text = $"{playerConfiguration.armor}/{playerConfiguration.maxArmor}";
         energyText.text = $"{playerConfiguration.energy}/{playerConfiguration.MaxEnergy}";
+    }
+
+    public void FadeScreen(float alpha)
+    {
+        StartCoroutine(Helper.Fade(fadePanel, alpha, 1f));
     }
 }
