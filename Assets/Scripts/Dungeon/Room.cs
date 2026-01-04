@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -12,12 +14,16 @@ public enum RoomType
 
 public class Room : MonoBehaviour
 {
+    public static Action<Room> OnPlayerEnter;
+
     [SerializeField] private bool isDebugging;
     [SerializeField] private RoomType roomType;
     [SerializeField] private Tilemap extraLayer;
 
     [SerializeField] private Transform[] doorPositionsNS;
     [SerializeField] private Transform[] doorPositionsWE;
+
+    public bool Cleared { get; set; } = false;
 
     /// <summary>
     /// 타일맵에서 프롭을 배치할 수 있는 위치(Vector3)를 저장하는 딕셔너리
@@ -41,7 +47,7 @@ public class Room : MonoBehaviour
     /// </summary>
     private void SetTiles()
     {
-        if (IsEmpty())
+        if (IsEmptyRoom())
             return;
 
         // ExtraLayer 타일맵에 배치된 모든 타일을 대상으로 루프를 실행한다.
@@ -61,10 +67,10 @@ public class Room : MonoBehaviour
     /// </summary>
     private void GeneratePropsBasedOnTemplate()
     {
-        if (IsEmpty())
+        if (IsEmptyRoom())
             return;
 
-        int randomIndex = Random.Range(0, LevelManager.Instance.RoomTemplates.templates.Length);
+        int randomIndex = UnityEngine.Random.Range(0, LevelManager.Instance.RoomTemplates.templates.Length);
         Texture2D template = LevelManager.Instance.RoomTemplates.templates[randomIndex];
         List<Vector3> positions = new List<Vector3>(tiles.Keys);
 
@@ -124,11 +130,49 @@ public class Room : MonoBehaviour
     }
 
     /// <summary>
+    /// 던전 룸의 모든 문을 연다.
+    /// </summary>
+    public void OpenAllDoors()
+    {
+        for (int i = 0; i < doors.Count; i++)
+        {
+            doors[i].PlayOpenAnimation();
+        }
+       
+    }
+
+    /// <summary>
+    /// 던전 룸의 모든 문을 닫는다.
+    /// </summary>
+    public void CloseAllDoors()
+    {
+        for (int i = 0; i < doors.Count; i++)
+        {
+            doors[i].PlayCloseAnimation();
+        }
+       
+    }
+
+    /// <summary>
     /// 현재 던전 룸이 입구(Entrance) 또는 빈 방(Empty)인지 확인한다. 
     /// </summary>
-    private bool IsEmpty()
+    private bool IsEmptyRoom()
     {
         return (roomType == RoomType.Entrance || roomType == RoomType.Empty);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (IsEmptyRoom())
+            return;
+
+        if (other.CompareTag("Player"))
+        {
+            if (OnPlayerEnter != null)
+            {
+                OnPlayerEnter.Invoke(this);
+            }
+        }
     }
 
     private void OnDrawGizmosSelected()
