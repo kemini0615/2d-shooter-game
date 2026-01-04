@@ -16,15 +16,24 @@ public class Room : MonoBehaviour
     [SerializeField] private RoomType roomType;
     [SerializeField] private Tilemap extraLayer;
 
+    [SerializeField] private Transform[] doorPositionsNS;
+    [SerializeField] private Transform[] doorPositionsWE;
+
     /// <summary>
     /// 타일맵에서 프롭을 배치할 수 있는 위치(Vector3)를 저장하는 딕셔너리
     /// </summary>
     private Dictionary<Vector3, bool> tiles = new Dictionary<Vector3, bool>();
 
+    /// <summary>
+    /// 던전 룸에 생성할 문을 저장하는 리스트
+    /// </summary>
+    private List<Door> doors = new List<Door>();
+
     private void Start()
     {
         SetTiles();
         GeneratePropsBasedOnTemplate();
+        GenerateDoors();
     }
 
     /// <summary>
@@ -81,6 +90,37 @@ public class Room : MonoBehaviour
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// 던전 룸 안에 출입구가 있다면 문을 생성한다.
+    /// </summary>
+    private void GenerateDoors()
+    {
+        if (doorPositionsNS.Length > 0)
+        {
+            for (int i = 0; i < doorPositionsNS.Length; i++)
+            {
+                InstantiateDoors(LevelManager.Instance.DungeonReferences.DoorNS, doorPositionsNS[i]);
+            }
+        }
+
+        if (doorPositionsWE.Length > 0)
+        {
+            for (int i = 0; i < doorPositionsWE.Length; i++)
+            {
+                InstantiateDoors(LevelManager.Instance.DungeonReferences.DoorWE, doorPositionsWE[i]);
+            }
+        }
+    }
+
+    /// <summary>
+    /// 던전 룸 안에 문을 생성하고 doors 리스트에 저장한다.
+    /// </summary>
+    private void InstantiateDoors(GameObject prefab, Transform transform)
+    {
+        GameObject door = Instantiate(prefab, transform.position, Quaternion.identity, transform);
+        doors.Add(door.GetComponent<Door>());
     }
 
     /// <summary>

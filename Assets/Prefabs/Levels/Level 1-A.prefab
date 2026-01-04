@@ -180,6 +180,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3108540736411736522}
     m_Modifications:
+    - target: {fileID: -8096548879452691832, guid: d2bdb9f4e5aa78842b5e2d303bb4f84d, type: 3}
+      propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1438608248163149313, guid: d2bdb9f4e5aa78842b5e2d303bb4f84d, type: 3}
       propertyPath: m_Name
       value: Room_WE
@@ -249,6 +253,10 @@ PrefabInstance:
     - target: {fileID: 409878966299114605, guid: e1306451c94c46b4cb6964b8f42d61e6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757124909455602430, guid: e1306451c94c46b4cb6964b8f42d61e6, type: 3}
+      propertyPath: roomType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4845371104941854874, guid: e1306451c94c46b4cb6964b8f42d61e6, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[1].m_Data
@@ -492,6 +500,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3108540736411736522}
     m_Modifications:
+    - target: {fileID: -3192892363125837610, guid: 07650c62c9b2069418633c56dccde883, type: 3}
+      propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3890859336378914106, guid: 07650c62c9b2069418633c56dccde883, type: 3}
       propertyPath: m_LocalPosition.x
       value: -52
