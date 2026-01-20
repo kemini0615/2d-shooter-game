@@ -9,11 +9,11 @@ public class LevelManager : MonoBehaviour
     // TEMP
     [SerializeField] GameObject player;
 
-    [SerializeField] private RoomTemplates roomTemplates;
-    [SerializeField] private DungeonReferences dungeonReferences;
+    [SerializeField] private RoomPallete roomPallete;
+    [SerializeField] private DungeonConfig dungeonConfig;
 
-    public RoomTemplates RoomTemplates => roomTemplates;
-    public DungeonReferences DungeonReferences => dungeonReferences;
+    public RoomPallete RoomPallete => roomPallete;
+    public DungeonConfig DungeonConfig => dungeonConfig;
 
     private int currentLevelIndex = 0;
     private int currentDungeonIndex = 0;
@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     private void GenerateDungeon()
     {
-        currentDungeon = Instantiate(dungeonReferences.levels[currentLevelIndex].dungeons[currentDungeonIndex], transform);
+        currentDungeon = Instantiate(dungeonConfig.levels[currentLevelIndex].dungeons[currentDungeonIndex], transform);
     }
 
     /// <summary>
@@ -66,7 +66,7 @@ public class LevelManager : MonoBehaviour
     {
         currentDungeonIndex++;
 
-        if (currentDungeonIndex >= dungeonReferences.levels[currentLevelIndex].dungeons.Length)
+        if (currentDungeonIndex >= dungeonConfig.levels[currentLevelIndex].dungeons.Length)
         {
             currentDungeonIndex = 0;
             currentLevelIndex++;

@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "RoomTemplates", menuName = "Dungeon/Room Templates")]
-public class RoomTemplates : ScriptableObject
+[CreateAssetMenu(fileName = "RoomPallete", menuName = "Dungeon/Room Palette")]
+public class RoomPallete : ScriptableObject
 {
     public Texture2D[] templates;
     public Prop[] props;

@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DungeonReferences", menuName = "Dungeon/Dungeon References")]
-public class DungeonReferences : ScriptableObject
+[CreateAssetMenu(fileName = "DungeonConfig", menuName = "Dungeon/Dungeon Config")]
+public class DungeonConfig : ScriptableObject
 {
     public Level[] levels;
 

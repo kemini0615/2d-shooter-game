@@ -72,8 +72,8 @@ public class Room : MonoBehaviour
         if (IsEmptyRoom())
             return;
 
-        int randomIndex = UnityEngine.Random.Range(0, LevelManager.Instance.RoomTemplates.templates.Length);
-        Texture2D template = LevelManager.Instance.RoomTemplates.templates[randomIndex];
+        int randomIndex = UnityEngine.Random.Range(0, LevelManager.Instance.RoomPallete.templates.Length);
+        Texture2D template = LevelManager.Instance.RoomPallete.templates[randomIndex];
         List<Vector3> positions = new List<Vector3>(tiles.Keys);
 
         // 템플릿의 모든 픽셀을 대상으로 루프를 실행한다.
@@ -83,7 +83,7 @@ public class Room : MonoBehaviour
             {
                 Color pixelColor = template.GetPixel(x, y);
 
-                foreach (Prop prop in LevelManager.Instance.RoomTemplates.props)
+                foreach (Prop prop in LevelManager.Instance.RoomPallete.props)
                 {
                     if (pixelColor == prop.pixelColor)
                     {
@@ -109,7 +109,7 @@ public class Room : MonoBehaviour
         {
             for (int i = 0; i < doorPositionsNS.Length; i++)
             {
-                InstantiateDoors(LevelManager.Instance.DungeonReferences.DoorNS, doorPositionsNS[i]);
+                InstantiateDoors(LevelManager.Instance.DungeonConfig.DoorNS, doorPositionsNS[i]);
             }
         }
 
@@ -117,7 +117,7 @@ public class Room : MonoBehaviour
         {
             for (int i = 0; i < doorPositionsWE.Length; i++)
             {
-                InstantiateDoors(LevelManager.Instance.DungeonReferences.DoorWE, doorPositionsWE[i]);
+                InstantiateDoors(LevelManager.Instance.DungeonConfig.DoorWE, doorPositionsWE[i]);
             }
         }
     }
