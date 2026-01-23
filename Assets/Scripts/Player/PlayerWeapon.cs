@@ -7,14 +7,17 @@ public class PlayerWeapon : MonoBehaviour
 
     private Weapon currentWeapon;
     private PlayerMovement playerMovement;
+    private PlayerInputActions playerInputActions;
 
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        playerInputActions = new PlayerInputActions();
     }
 
     void Start()
     {
+        playerInputActions.Attack.Shoot.performed += ctx => Attack();
         InstantiateWeapon(initialWeapon);
     }
 
@@ -49,5 +52,23 @@ public class PlayerWeapon : MonoBehaviour
         }
 
         currentWeapon.transform.eulerAngles = new Vector3(0f, 0f, angle);
+    }
+
+    private void Attack()
+    {
+        if (currentWeapon == null)
+            return;
+
+        currentWeapon.Attack();
+    }
+
+    private void OnEnable()
+    {
+        playerInputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerInputActions.Disable();
     }
 }

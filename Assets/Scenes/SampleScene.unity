@@ -2258,6 +2258,10 @@ PrefabInstance:
       value: Player_Warrior
       objectReference: {fileID: 0}
     - target: {fileID: 878014069292974933, guid: 90d758d04c742cc429e85087e7a304fa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 878014069292974933, guid: 90d758d04c742cc429e85087e7a304fa, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2358,10 +2362,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Default
       objectReference: {fileID: 0}
+    - target: {fileID: 5966077089237544795, guid: bcdc23816679f6445afe9df69034df41, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8608294947751275822, guid: bcdc23816679f6445afe9df69034df41, type: 3}
       propertyPath: initialWeapon
       value: 
-      objectReference: {fileID: 1512843280649447942, guid: f03bd0c76d64d784ba09dd54f98d8f1b, type: 3}
+      objectReference: {fileID: -4025718390341207868, guid: f03bd0c76d64d784ba09dd54f98d8f1b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2418,6 +2426,10 @@ PrefabInstance:
     - target: {fileID: 6482440959335030363, guid: 472e937e75ec98a4492620996269322f, type: 3}
       propertyPath: m_Name
       value: Player_Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482440959335030363, guid: 472e937e75ec98a4492620996269322f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6482440959335030363, guid: 472e937e75ec98a4492620996269322f, type: 3}
       propertyPath: m_IsActive
@@ -2479,6 +2491,10 @@ PrefabInstance:
     - target: {fileID: 6865728510488739008, guid: 70eb23545e8e24946ae2d8adc15e9f68, type: 3}
       propertyPath: m_Name
       value: Player_Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865728510488739008, guid: 70eb23545e8e24946ae2d8adc15e9f68, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6865728510488739008, guid: 70eb23545e8e24946ae2d8adc15e9f68, type: 3}
       propertyPath: m_IsActive
