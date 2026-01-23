@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float alpha = 0.1f;
 
     private Vector2 moveDirection;
+    public Vector2 MoveDirection => moveDirection;
     private float currentSpeed;
     private bool canDash;
 
