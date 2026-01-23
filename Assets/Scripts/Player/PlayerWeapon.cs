@@ -23,8 +23,7 @@ public class PlayerWeapon : MonoBehaviour
 
     void Update()
     {
-        if (playerMovement.MoveDirection != Vector2.zero)
-            RotateWeapon(playerMovement.MoveDirection);
+        RotateWeapon();
     }
 
     private void InstantiateWeapon(Weapon weapon)
@@ -32,12 +31,16 @@ public class PlayerWeapon : MonoBehaviour
         currentWeapon = Instantiate(weapon, weaponPosition.position, Quaternion.identity, weaponPosition);
     }
 
-    private void RotateWeapon(Vector3 direction)
+    private void RotateWeapon()
     {
+        Vector2 mouseScreenPosition = Input.mousePosition;
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+        Vector3 direction = mouseWorldPosition - transform.position;
+
         // 좌표의 라디안 각도를 반환한다.
         // 360도(degrees) = 2파이 라디안(radians)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        
+
         // 오른쪽 방향.
         if (direction.x >= 0f)
         {
