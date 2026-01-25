@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class PlayerEnerygy : MonoBehaviour
+public class PlayerEnergy : MonoBehaviour
 {
     [SerializeField] private PlayerConfiguration playerConfiguration;
+
+    public bool CanUseEnergy => playerConfiguration.energy > 0f;
 
     /// <summary>
     /// 회복량만큼 에너지를 회복한다.
