@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f12434bc805dc4196e0890c15d3a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialWeapon: {fileID: 6340556456687088348, guid: 5e30c07caab7a33409ee7d578875a372, type: 3}
+  initialWeapon: {fileID: -4025718390341207868, guid: f03bd0c76d64d784ba09dd54f98d8f1b, type: 3}
   weaponPosition: {fileID: 3519170665103810126}
 --- !u!50 &8615302673139981508
 Rigidbody2D:

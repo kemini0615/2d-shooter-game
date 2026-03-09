@@ -5,11 +5,11 @@ using UnityEngine;
 public class RoomPallete : ScriptableObject
 {
     public Texture2D[] templates;
-    public Prop[] props;
+    public PropData[] props;
 }
 
 [Serializable]
-public struct Prop
+public struct PropData
 {
     public string name;
     public GameObject prefab;

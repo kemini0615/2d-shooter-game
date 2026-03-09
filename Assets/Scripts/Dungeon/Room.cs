@@ -83,7 +83,7 @@ public class Room : MonoBehaviour
             {
                 Color pixelColor = template.GetPixel(x, y);
 
-                foreach (Prop prop in LevelManager.Instance.RoomPallete.props)
+                foreach (PropData prop in LevelManager.Instance.RoomPallete.props)
                 {
                     if (pixelColor == prop.pixelColor)
                     {

@@ -14,6 +14,8 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        other.GetComponent<IDamageable>()?.TakeDamage();
+
         Destroy(gameObject);
     }
 }
