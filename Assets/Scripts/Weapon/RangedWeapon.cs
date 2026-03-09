@@ -8,7 +8,6 @@ public class RangedWeapon : Weapon
     {
         base.Attack();
 
-        PlayerShootAnimation();
         Shoot();
     }
 

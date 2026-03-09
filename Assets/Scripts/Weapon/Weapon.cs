@@ -13,10 +13,13 @@ public class Weapon : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
-    protected void PlayerShootAnimation()
+    protected void PlayShootAnimation()
     {
         animator.SetTrigger("Shoot");
     }
 
-    public virtual void Attack() { }
+    public virtual void Attack()
+    {
+        PlayShootAnimation();
+    }
 }
