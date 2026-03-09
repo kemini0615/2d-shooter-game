@@ -10,10 +10,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject player;
 
     [SerializeField] private RoomPallete roomPallete;
-    [SerializeField] private DungeonConfig dungeonConfig;
+    [SerializeField] private DungeonConfiguration dungeonConfig;
 
     public RoomPallete RoomPallete => roomPallete;
-    public DungeonConfig DungeonConfig => dungeonConfig;
+    public DungeonConfiguration DungeonConfig => dungeonConfig;
 
     private int currentLevelIndex = 0;
     private int currentDungeonIndex = 0;

@@ -392,6 +392,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -528,6 +529,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2204,6 +2206,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2318,6 +2321,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3966917989214511864, guid: bcdc23816679f6445afe9df69034df41, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1301285479, guid: 8d033255143a4fa409c6780c9d79cf72, type: 3}
     - target: {fileID: 4798651779321793994, guid: bcdc23816679f6445afe9df69034df41, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
